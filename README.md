@@ -8,7 +8,7 @@ Note that I preferred to install packages with [mamba](https://mamba.readthedocs
 
 1. Clone the repository. (If you already know what packages you'd like to add, you can edit the `environments/base.yml` file. It might be helpful to rename both the repo and the yaml file itself.)
 
-```bash
+```sh
 git clone https://github.com/benslack19/data-science-base-repo.git
 cd data-science-base-repo
 ```
@@ -19,7 +19,7 @@ cd data-science-base-repo
 
 3. Install pre-commit hooks:
 
-```bash
+```sh
 pre-commit install
 ```
 
@@ -34,17 +34,28 @@ pre-commit install
 
 - Run Ruff manually: 
 
-```bash
+```sh
 ruff check .
 ruff format . 
 ```
 
 - Run `pre-commit` on all files:
 
-```bash
+```sh
 pre-commit run --all-files
 ```
 
+## Formatting notebooks on save
+
+This was done with the following:
+
+```sh
+pip install ruff jupyterlab-code-formatter
+```
+
+# Other configurations
+
+If using iterm2, it might be helpful to allow for this option for moving the cursor by going to `Settings -> Profiles -> Keys -> Key Mappings` as explained [here](https://stackoverflow.com/questions/81272/how-to-move-the-cursor-word-by-word-in-the-os-x-terminal) and [here](https://coderwall.com/p/h6yfda/use-and-to-jump-forwards-backwards-words-in-iterm-2-on-os-x).
 
 ## To do
 - Create a generic data science template notebook and validate code linting
