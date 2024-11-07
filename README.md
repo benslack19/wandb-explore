@@ -2,7 +2,7 @@
 
 It's common to make different virtual environments depending on project needs. But often a common set of packages or linting programs will be used across these different environments. The purpose of this repository is to streamline the setup of data science environments. An example use case is to clone 
 
- contains conda environment configurations and linting setup for data science projects. 
+Note that I preferred to install packages with [mamba](https://mamba.readthedocs.io/en/latest/index.html). I installed with minforge release `Release 24.9.0-0`.
 
 ## Setup
 
@@ -15,7 +15,7 @@ cd data-science-base-repo
 
 2. Create conda environment:
 
-`conda env create -f environments/base.yml`
+`mamba env create -f environments/base.yml`
 
 3. Install pre-commit hooks:
 
@@ -28,7 +28,7 @@ pre-commit install
 
 - Activate the base environment for data science work:
 
-`conda activate ds-base`
+`mamba activate ds-base`
 
 - Code!
 
