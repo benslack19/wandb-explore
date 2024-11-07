@@ -1,0 +1,25 @@
+[tool.ruff]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # isort
+    "I",
+]
+ignore = []
+
+[tool.ruff.per-file-ignores]
+"__init__.py" = ["F401"]
+
+# might be nice if I want to have own module
+# [tool.ruff.isort]
+# known-first-party = ["myproject"]
+
+[tool.ruff.mccabe]
+max-complexity = 10
+
+# TO DO:
+# add coverage
+# mypy?
+# see what else to add from ruff documentation
