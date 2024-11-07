@@ -1,6 +1,6 @@
 # A Base Data Science Repo for Environment Configurations
 
-It's common to make different virtual environments depending on project needs. But often a common set of packages or linting programs will be used across these different environments. The purpose of this repository is to streamline the setup of data science environments. An example use case is to clone 
+It's common to make different virtual environments depending on project needs. But often a common set of packages or linting and formatting programs will be used across these different environments. The purpose of this repository is to streamline the setup of data science environments. An example use case is to clone 
 
 Note that I preferred to install packages with [mamba](https://mamba.readthedocs.io/en/latest/index.html). I installed with minforge release `Release 24.9.0-0`.
 
