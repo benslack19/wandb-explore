@@ -47,11 +47,24 @@ pre-commit run --all-files
 
 ## Formatting notebooks on save
 
-This was done with the following:
+This was done with the following steps.
 
+If `ruff` and `jupyterlab-code-formatter` were not already included in the environment yml file
 ```sh
 pip install ruff jupyterlab-code-formatter
 ```
+
+{
+  "preferences": {
+    "default_formatter": {
+      "python": ["ruff"]
+    },
+    "jupyterlab_code_formatter": {
+      "formatOnSave": true
+  }
+  }
+}
+
 
 # Other configurations
 
@@ -59,6 +72,7 @@ If using iterm2, it might be helpful to allow for this option for moving the cur
 
 ## To do
 - Create a generic data science template notebook and validate code linting
+    - Identify how to autoformat long lines
 - Create a utils script and validate code linting
 - Re-build environment with python 3.11
 - Re-visit ruff settings
