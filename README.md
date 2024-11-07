@@ -44,3 +44,13 @@ ruff format .
 ```bash
 pre-commit run --all-files
 ```
+
+
+## To do
+- Create a generic data science template notebook and validate code linting
+- Create a utils script and validate code linting
+- Re-build environment with python 3.11
+- Re-visit ruff settings
+- Create project-specific environments
+    - NLP environment
+    - Bayesian statistics
