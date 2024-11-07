@@ -21,7 +21,6 @@ cd data-science-base-repo
 
 ```bash
 pre-commit install
-pre-commit install
 ```
 
 
