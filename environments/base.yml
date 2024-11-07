@@ -16,6 +16,7 @@ dependencies:
   - joblib
   - pip
   - smart-open
+  - ydata-profiling
   - pip:
     - ruff
     - pre-commit
