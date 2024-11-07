@@ -1,4 +1,46 @@
+# Some settings taken from here
+# https://docs.astral.sh/ruff/configuration/
+
 [tool.ruff]
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".ipynb_checkpoints",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pyenv",
+    ".pytest_cache",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    "venv",
+]
+extend-include = ["*.ipynb"]
+
+# Same as Black.
+line-length = 88
+indent-width = 4
+
+# Assume Python 3.11
+target-version = "py11"
+
+[tool.ruff.lint]
 select = [
     # pycodestyle
     "E",
@@ -7,7 +49,11 @@ select = [
     # isort
     "I",
 ]
+line-length = 88
 ignore = []
+# Allow fix for all enabled rules (when `--fix`) is provided.
+fixable = ["ALL"]
+unfixable = []
 
 [tool.ruff.per-file-ignores]
 "__init__.py" = ["F401"]
@@ -16,7 +62,7 @@ ignore = []
 # [tool.ruff.isort]
 # known-first-party = ["myproject"]
 
-[tool.ruff.mccabe]
+[tool.ruff.lint.mccabe]
 max-complexity = 10
 
 # TO DO:
