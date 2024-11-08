@@ -49,21 +49,27 @@ pre-commit run --all-files
 
 This was done with the following steps.
 
-If `ruff` and `jupyterlab-code-formatter` were not already included in the environment yml file
+If `ruff`, `black` and `jupyterlab-code-formatter` were not already included in the environment yml file
 ```sh
-pip install ruff jupyterlab-code-formatter
+pip install ruff black jupyterlab-code-formatter
 ```
 
+Then in the settings.json within jupyter lab code formatter:
+
+```json
 {
   "preferences": {
     "default_formatter": {
-      "python": ["ruff"]
+      "python": ["ruff", "black"]
     },
     "jupyterlab_code_formatter": {
       "formatOnSave": true
   }
   }
 }
+```
+
+Note that ruff [does not autofix long line lengths](https://stackoverflow.com/questions/76771858/ruff-does-not-autofix-line-too-long-violation). Therefore, it helps to use ruff in combination with `black`.
 
 
 # Other configurations

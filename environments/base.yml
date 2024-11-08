@@ -19,5 +19,6 @@ dependencies:
   - ydata-profiling
   - pip:
     - ruff
+    - black
     - jupyterlab-code-formatter
     - pre-commit

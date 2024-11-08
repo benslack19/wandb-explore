@@ -1,6 +1,7 @@
 # Some settings taken from here
 # https://docs.astral.sh/ruff/configuration/
 
+
 [tool.ruff]
 exclude = [
     ".git",
