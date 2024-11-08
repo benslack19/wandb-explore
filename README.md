@@ -45,7 +45,7 @@ ruff format .
 pre-commit run --all-files
 ```
 
-## Formatting notebooks on save
+## Formatting notebooks
 
 This was done with the following steps.
 
@@ -71,14 +71,35 @@ Then in the settings.json within jupyter lab code formatter:
 
 Note that ruff [does not autofix long line lengths](https://stackoverflow.com/questions/76771858/ruff-does-not-autofix-line-too-long-violation). Therefore, it helps to use ruff in combination with `black`.
 
+## Formatting scripts using VSCode
+- Install the [Ruff extension](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff).
+- Install the [Black formatter extension](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter).
+
 
 # Other configurations
-
 If using iterm2, it might be helpful to allow for this option for moving the cursor by going to `Settings -> Profiles -> Keys -> Key Mappings` as explained [here](https://stackoverflow.com/questions/81272/how-to-move-the-cursor-word-by-word-in-the-os-x-terminal) and [here](https://coderwall.com/p/h6yfda/use-and-to-jump-forwards-backwards-words-in-iterm-2-on-os-x).
+
+
+## Examples to verify formatting
+
+Paste these examples as a way to verify formatting in your notebook or script is working.
+
+```python
+# formatting should alphabetize this list of packages
+import seaborn as sns
+import pandas as pd
+import numpy as np
+```
+
+```python
+# formatting should change this long list so that each element is on its own line
+test_list = [ "apple", "banana", "orange", "apple", "banana", "orange", "apple", "banana", "orange"]
+```
+
+
 
 ## To do
 - Create a generic data science template notebook and validate code linting
-    - Identify how to autoformat long lines
 - Create a utils script and validate code linting
 - Re-build environment with python 3.11
 - Re-visit ruff settings

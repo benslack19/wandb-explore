@@ -13,6 +13,7 @@ exclude = [
     "_build",
     "site-packages",
     "venv",
+    "README.md"
 ]
 
 # Same as Black
