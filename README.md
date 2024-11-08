@@ -89,9 +89,7 @@ Paste these examples as a way to verify formatting in your notebook or script is
 import seaborn as sns
 import pandas as pd
 import numpy as np
-```
 
-```python
 # formatting should change this long list so that each element is on its own line
 test_list = [ "apple", "banana", "orange", "apple", "banana", "orange", "apple", "banana", "orange"]
 ```
