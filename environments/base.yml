@@ -18,6 +18,7 @@ dependencies:
   - smart-open
   - ydata-profiling
   - pip:
+    - watermark
     - ruff
     - black
     - jupyterlab-code-formatter
