@@ -4,22 +4,22 @@ channels:
   - defaults
 dependencies:
   - python=3.11
-  - numpy
-  - pandas
-  - matplotlib
-  - seaborn
-  - scikit-learn
-  - jupyter
-  - pytorch
-  - statsmodels
-  - scipy
-  - joblib
-  - pip
-  - smart-open
-  - ydata-profiling
+  - numpy=2.0.2
+  - pandas=2.2.3
+  - matplotlib=3.9.2
+  - seaborn=0.13.2
+  - scikit-learn=1.5.2
+  - jupyter=1.1.1
+  - pytorch=2.5.1.post3
+  - statsmodels=0.14.4
+  - scipy=1.13.1
+  - joblib=1.4.2
+  - pip=24.3.1
+  - smart-open=7.0.5
+  - ydata-profiling=0.0.dev0
   - pip:
-    - watermark
-    - ruff
-    - black
-    - jupyterlab-code-formatter
-    - pre-commit
+    - watermark=2.5.0
+    - ruff=0.7.2
+    - black=24.10.0
+    - jupyterlab-code-formatter=3.0.2
+    - pre-commit=4.0.1
