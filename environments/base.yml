@@ -18,8 +18,8 @@ dependencies:
   - smart-open=7.0.5
   - ydata-profiling=0.0.dev0
   - pip:
-    - watermark=2.5.0
-    - ruff=0.7.2
-    - black=24.10.0
-    - jupyterlab-code-formatter=3.0.2
-    - pre-commit=4.0.1
+    - watermark==2.5.0
+    - ruff==0.7.2
+    - black==24.10.0
+    - jupyterlab-code-formatter==3.0.2
+    - pre-commit==4.0.1

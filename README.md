@@ -61,11 +61,9 @@ Then in the settings.json within jupyter lab code formatter:
   "preferences": {
     "default_formatter": {
       "python": ["ruff", "black"]
-    },
-    "jupyterlab_code_formatter": {
-      "formatOnSave": true
-  }
-  }
+    }
+  },
+  "formatOnSave": true
 }
 ```
 
