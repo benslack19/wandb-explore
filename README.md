@@ -72,8 +72,9 @@ Note that ruff [does not autofix long line lengths](https://stackoverflow.com/qu
 ## Formatting scripts using VSCode
 - Install the [Ruff extension](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff).
 - Install the [Black formatter extension](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter).
+- Ensure there are no potential conflicts for extensions (e.g. isort is disabled).
 
-
+```
 # Other configurations
 If using iterm2, it might be helpful to allow for this option for moving the cursor by going to `Settings -> Profiles -> Keys -> Key Mappings` as explained [here](https://stackoverflow.com/questions/81272/how-to-move-the-cursor-word-by-word-in-the-os-x-terminal) and [here](https://coderwall.com/p/h6yfda/use-and-to-jump-forwards-backwards-words-in-iterm-2-on-os-x).
 
