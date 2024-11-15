@@ -6,5 +6,11 @@
             "color": "#888888",
             "style": "dashed"
         }
-    ]
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports.ruff": true
+        }
+    }
 }
