@@ -1,0 +1,10 @@
+{
+    "editor.formatOnSave": true,
+    "editor.rulers": [
+        {
+            "column": 88,
+            "color": "#888888",
+            "style": "dashed"
+        }
+    ]
+}
