@@ -37,7 +37,7 @@ pre-commit install
 # all files
 pre-commit run --all-files
 # or a specific file
-pre-commit run --files utils.py
+pre-commit run --files ./project/utils.py
 ```
 
 - Or run specific tools:
