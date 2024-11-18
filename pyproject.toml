@@ -1,6 +1,10 @@
 # Some settings taken from here
 # https://docs.astral.sh/ruff/configuration/
 
+# TO DO:
+# add coverage
+# mypy?
+# see what else to add from ruff documentation
 
 [tool.ruff]
 exclude = [
@@ -48,7 +52,12 @@ unfixable = []
 # [tool.ruff.isort]
 # known-first-party = ["myproject"]
 
-# TO DO:
-# add coverage
-# mypy?
-# see what else to add from ruff documentation
+[tool.mypy]
+python_version = "3.11"
+disallow_untyped_defs = true
+ignore_missing_imports = true
+check_untyped_defs = true
+warn_return_any = true
+warn_unused_ignores = true
+show_error_codes = true
+
