@@ -105,6 +105,7 @@ test_list = [ "apple", "banana", "orange", "apple", "banana", "orange", "apple",
 
 
 ## To do
+- Add tests?
 - Create project-specific environments
     - NLP environment
     - Bayesian statistics
