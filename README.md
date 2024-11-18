@@ -32,18 +32,25 @@ pre-commit install
 
 - Code!
 
-- Run Ruff manually: 
-
+- Run `pre-commit` on files:
 ```sh
+# all files
+pre-commit run --all-files
+# or a specific file
+pre-commit run --files utils.py
+```
+
+- Or run specific tools:
+```sh
+# ruff only
 ruff check .
 ruff format . 
+
+# mypy only
+mypy .
 ```
 
-- Run `pre-commit` on all files:
 
-```sh
-pre-commit run --all-files
-```
 
 ## Formatting notebooks
 
