@@ -32,6 +32,8 @@ pre-commit install
 
 - Code!
 
+- Commit with [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/#specification)
+
 - Run `pre-commit` on files:
 ```sh
 # all files
@@ -103,10 +105,6 @@ test_list = [ "apple", "banana", "orange", "apple", "banana", "orange", "apple",
 
 
 ## To do
-- Create a generic data science template notebook and validate code linting
-- Create a utils script and validate code linting
-- Re-build environment with python 3.11
-- Re-visit ruff settings
 - Create project-specific environments
     - NLP environment
     - Bayesian statistics
