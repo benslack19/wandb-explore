@@ -15,7 +15,7 @@ cd wandb-explore
 
 2. Create mamba environment:
 
-`mamba env create -f environments/wandb.yml`
+`mamba env create --file=environments/wandb.yml`
 
 3. Install pre-commit hooks:
 

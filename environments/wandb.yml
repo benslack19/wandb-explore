@@ -10,7 +10,7 @@ dependencies:
   - seaborn=0.13.2
   - scikit-learn=1.5.2
   - jupyter=1.1.1
-  - pytorch=2.5.1.post3
+  - pytorch
   - statsmodels=0.14.4
   - scipy=1.13.1
   - joblib=1.4.2
