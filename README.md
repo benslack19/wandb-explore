@@ -13,7 +13,7 @@ git clone https://github.com/benslack19/data-science-base-repo.git wandb-explore
 cd wandb-explore
 ```
 
-2. Create conda environment:
+2. Create mamba environment:
 
 `mamba env create -f environments/wandb.yml`
 
