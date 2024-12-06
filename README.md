@@ -1,21 +1,21 @@
-# A Base Data Science Repo for Environment Configurations
+# A Repo for Exploring Weights and Biases
 
-It's common to make different virtual environments depending on project needs. But often a common set of packages or linting and formatting programs will be used across these different environments. The purpose of this repository is to streamline the setup of data science environments. An example use case is to clone 
+This virtual environment is specifically to have `pytorch` along with the `wandb` library.
 
-Note that I preferred to install packages with [mamba](https://mamba.readthedocs.io/en/latest/index.html). I installed with minforge release `Release 24.9.0-0`.
+Note that I preferred to install packages with [mamba](https://mamba.readthedocs.io/en/latest/index.html). I installed with miniforge release `Release 24.9.0-0`.
 
 ## Setup
 
-1. Clone the repository. (If you already know what packages you'd like to add, you can edit the `environments/base.yml` file. It might be helpful to rename both the repo and the yaml file itself.)
+1. I cloned [`data-science-base-repo`](https://github.com/benslack19/data-science-base-repo), renamed to `wandb-explore`, then updated the environment yaml file to be specific to this project.
 
 ```sh
-git clone https://github.com/benslack19/data-science-base-repo.git
-cd data-science-base-repo
+git clone https://github.com/benslack19/data-science-base-repo.git wandb-explore
+cd wandb-explore
 ```
 
 2. Create conda environment:
 
-`mamba env create -f environments/base.yml`
+`mamba env create -f environments/wandb.yml`
 
 3. Install pre-commit hooks:
 
@@ -28,7 +28,7 @@ pre-commit install
 
 - Activate the base environment for data science work:
 
-`mamba activate ds-base`
+`mamba activate wandb`
 
 - Code!
 
@@ -56,14 +56,7 @@ mypy .
 
 ## Formatting notebooks
 
-This was done with the following steps.
-
-If `ruff`, `black` and `jupyterlab-code-formatter` were not already included in the environment yml file
-```sh
-pip install ruff black jupyterlab-code-formatter
-```
-
-Then in the settings.json within jupyter lab code formatter:
+In the settings.json within jupyter lab code formatter:
 
 ```json
 {
@@ -105,9 +98,4 @@ test_list = [ "apple", "banana", "orange", "apple", "banana", "orange", "apple",
 
 
 ## To do
-- Consider `uv` from astral
-- Consider nbqa?
 - Add tests?
-- Create project-specific environments
-    - NLP environment
-    - Bayesian statistics
