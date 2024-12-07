@@ -95,6 +95,9 @@ import numpy as np
 test_list = [ "apple", "banana", "orange", "apple", "banana", "orange", "apple", "banana", "orange"]
 ```
 
+# Created docker image with [colima](https://github.com/abiosoft/colima)
+
+
 
 
 ## To do
