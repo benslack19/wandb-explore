@@ -49,12 +49,36 @@ RUN apt-get update > /dev/null && \
 ENTRYPOINT ["tini", "--"]
 # CMD [ "/bin/bash" ]
 
-# Create a mamba environment from the YAML file
+# # Create a mamba environment from the YAML file
+# COPY environments/wandb.yml /tmp/wandb.yml
+# RUN mamba env create -f /tmp/wandb.yml
+
+# # Make RUN commands use the new environment
+# SHELL ["mamba", "run", "-n", "wandb", "/bin/bash", "-c"]
+
+# # Set the default command to activate the conda environment
+# CMD ["mamba", "run", "--no-capture-output", "-n", "wandb", "/bin/bash"]
+
+# Add packages based on conda/mamba
+# Copy the YAML file
 COPY environments/wandb.yml /tmp/wandb.yml
-RUN mamba env create -f /tmp/wandb.yml
 
-# Make RUN commands use the new environment
-SHELL ["mamba", "run", "-n", "wandb", "/bin/bash", "-c"]
+# Install packages from the YAML file into the base environment
+RUN conda env update -n base -f /tmp/wandb.yml && \
+    conda clean --all --yes
 
-# Set the default command to activate the conda environment
-CMD ["mamba", "run", "--no-capture-output", "-n", "wandb", "/bin/bash"]
+# Set the default command
+CMD ["/bin/bash"]
+
+# Run as non-root user for security reasons -------
+# Create a non-root user
+RUN useradd -m -s /bin/bash nonrootuser
+
+# Set the working directory to the user's home
+WORKDIR /home/nonrootuser
+
+# Change ownership of the conda installation
+RUN chown -R nonrootuser:nonrootuser $CONDA_DIR
+
+# Switch to the non-root user
+USER nonrootuser
