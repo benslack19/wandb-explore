@@ -27,8 +27,6 @@ RUN apt-get update > /dev/null && \
         wget bzip2 ca-certificates \
         git \
         tini \
-        nginx \
-        ca-certificates \
         > /dev/null && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
@@ -46,10 +44,7 @@ RUN apt-get update > /dev/null && \
         echo '. ${CONDA_DIR}/etc/.mambaforge_deprecation.sh' >> ~/.bashrc; \
     fi
 
-# COPY ubuntu/mambaforge_deprecation.sh ${CONDA_DIR}/etc/.mambaforge_deprecation.sh
-
 ENTRYPOINT ["tini", "--"]
-# CMD [ "/bin/bash" ]
 
 # # Create a mamba environment from the YAML file
 # COPY environments/wandb.yml /tmp/wandb.yml
@@ -71,13 +66,6 @@ RUN conda env update -n base -f /tmp/wandb.yml && \
 
 # Set the default command
 CMD ["/bin/bash"]
-
-
-# Set environment variables
-# see https://docs.aws.amazon.com/sagemaker/latest/dg/adapt-inference-container.html
-ENV PYTHONUNBUFFERED=TRUE
-ENV PYTHONDONTWRITEBYTECODE=TRUE
-
 
 # Run as non-root user for security reasons -------
 # Create a non-root user
