@@ -26,3 +26,6 @@ dependencies:
     - pre-commit==4.0.1
     - mypy==1.13.0
     - wandb
+    - flask
+    - gevent
+    - gunicorn
