@@ -30,3 +30,4 @@ dependencies:
     - gevent
     - gunicorn
     - sagemaker
+    - graphene
