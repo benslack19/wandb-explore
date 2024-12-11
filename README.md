@@ -1,4 +1,4 @@
-# A Repo for Exploring Machine Learning Engineering datasets, tools, and approaches
+# Exploring machine learning engineering datasets, tools, and approaches
 
 The purpose of this repo is to create a machine learning pipeline to analyze multi-modal biomedical data, implementing MLOps best practices and deploying in a cloud environment.
 
