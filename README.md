@@ -4,20 +4,24 @@ The purpose of this repo is to create a machine learning pipeline to analyze mul
 
 Project components:
 1. Data preparation
-   - Use of a dataset from [The Cancer Genome Atlas Program (TCGA)](https://www.cancer.gov/ccg/research/genome-sequencing/tcga). Specifically, I use 
-   - Preprocess and clean the data using Python libraries.
+    - Use of a dataset from [The Cancer Genome Atlas Program (TCGA)](https://www.cancer.gov/ccg/research/genome-sequencing/tcga). Specifically, I use data from the following paper of uterine carcinosarcoma https://www.cell.com/cancer-cell/fulltext/S1535-6108(17)30053-3
+    - Preprocess and clean the data using Python libraries.
 2. Model development
-  - Implement a basic deep learning model using PyTorch to predict patient 
+    - Implement a simple neural network model using PyTorch to predict patient remission.
+    - Start with clinical features before integrating genomic data.
+3. MLOps Pipeline:
+    - Set up a version control system using Git for code management (this repo).
+    - Implement experiment tracking and model versioning using [Weights and Biases](https://wandb.ai/site)
+    - Set up a [virtual environment](https://github.com/benslack19/wandb-explore/blob/main/environments/wandb.yml) which can also be used in combination with a [Dockerfile](https://github.com/benslack19/wandb-explore/blob/main/Dockerfile) for reproducibility.
+4. Cloud Deployment:
+    - Deploy the model on AWS SageMaker.
+    - Implement an API endpoint for model inference.
+    - **Note: I am currently troubleshooting this step.**
 
-TCGNA, Weights and Biases, and AWS Sagemaker
-
-
-
-The purpose of is virtual environment is specifically to have `pytorch` along with the `wandb` library.
-
-Note that I preferred to install packages with [mamba](https://mamba.readthedocs.io/en/latest/index.html). I installed with miniforge release `Release 24.9.0-0`.
 
 # Setup
+
+I preferred to install packages with [mamba](https://mamba.readthedocs.io/en/latest/index.html). I installed with miniforge release `Release 24.9.0-0`.
 
 1. I cloned [`data-science-base-repo`](https://github.com/benslack19/data-science-base-repo), renamed to `wandb-explore`, then updated the environment yaml file to be specific to this project.
 
@@ -108,10 +112,9 @@ import numpy as np
 test_list = [ "apple", "banana", "orange", "apple", "banana", "orange", "apple", "banana", "orange"]
 ```
 
-# Created docker image with [colima](https://github.com/abiosoft/colima)
+## Using docker image with [colima](https://github.com/abiosoft/colima)
 
+[Colima](https://github.com/abiosoft/colima) allows use of running containers while obviating the use of Docker Desktop.
 
-
-
-## To do
+# To do
 - Add tests?
