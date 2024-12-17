@@ -116,5 +116,29 @@ test_list = [ "apple", "banana", "orange", "apple", "banana", "orange", "apple",
 
 [Colima](https://github.com/abiosoft/colima) allows use of running containers while obviating the use of Docker Desktop.
 
+Some settings were necessary for testing of local deployment. 
+
+```python
+import os
+import docker
+
+# Set the Docker host to Colima's socket
+os.environ["DOCKER_HOST"] = (
+    f"unix:///Users/{os.getlogin()}/.colima/default/docker.sock"
+)
+
+client = docker.from_env(
+    environment={
+        "DOCKER_HOST": f"unix:///Users/{os.getlogin()}/.colima/default/docker.sock"
+    }
+)
+
+predictor_local = pt_local_builder.deploy(
+    docker_settings={
+        "DOCKER_HOST": f"unix:///Users/{os.getlogin()}/.colima/default/docker.sock"
+    }
+)
+```
+
 # To do
 - Add tests?
